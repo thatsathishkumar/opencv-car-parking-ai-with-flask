@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block register %}
+<div class="register">
+    
+    <nav>
+        <a href="/hero">home</a>
+        <a href="/login">login</a>
+    </nav>
+    <h1>Welcome to register</h1>
+    <form action="/reg" method="post">
+        <div>
+            <label for="name-field">enter your name</label><input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="email-field">enter your mail</label><input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="password-field">enter your password</label><input type="password" name="password" id="password">
+        </div>
+        <div>
+            <a href="/login">already have an account?</a>
+        </div>
+        <div>
+            <input type="submit" value="submit">
+        </div>
+    </form>
+</div>
+{% endblock %}

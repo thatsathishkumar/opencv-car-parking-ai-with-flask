@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block login %}
+<div class="login-container">
+    
+    <nav>
+        <a href="/hero">home</a>
+        <a href="/register">register</a>
+    </nav>
+    <h1>Welcome to login</h1>
+    <form action="/log" method="post">
+        <div>
+            <label for="email-field">enter your mail</label><input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="password-field">enter your password</label><input type="password" name="password" id="password">
+        </div>
+        <div>
+            <a href="/register">new for here create account?</a>
+        </div>
+        <div>
+            <input type="submit" value="submit">
+        </div>
+    </form>
+    {% if msg is not none %}
+        <h1>{{msg}}</h1>
+    {% endif %}
+</div>
+{% endblock %}
